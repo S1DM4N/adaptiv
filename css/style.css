@@ -547,10 +547,6 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
     .footer hr {
         width: auto;
     }
-    /* Настройка отступов для хеадера */
-    .header {
-        margin: 1.8vh 0 1.8vh 0;
-    }
     /* Скрытие всех элементов в хедоре */
     .phone, .usr, .bottom {
         display: none;
@@ -559,7 +555,10 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
     .logo img {
         width: 20vw;
     }
-    
+        /* Настройка отступов для хеадера */
+    .header {
+        margin: 1.8vh 0 1.8vh 0;
+    }
     /* Скрытие логотипа десктопной версии */
     .lg {
     display: none;
@@ -756,55 +755,4 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
     .text_c {
         display: flex;
     }
-}
-/* Медиа запрос для расширения экрана равное 1000 или меньше */
-@media (max-width: 1000px) {
-    .ds h1 {
-        font-size: 4vw;
-    }
-}
-/* Медиа запрос для расширения экрана равное 900 или меньше */
-@media (max-width: 900px) {
-    /* Изменение размера шрифта */
-    .cb h1, .m_top .chg_1 h1 {
-        font-size: 6vw;
-    }
-    /* Изменение размера шрифта заголовков */
-    .change_3 h1, .change_4 h1 {
-        font-size: 5vw;
-    }
-    /* Добаление отступа */
-    .definition {
-        margin-left: 3.5vw;
-    }   
-    /* Изменение размера шрифта заголовка */
-    .ds h1 {
-        font-size: 4.3vw;
-    }
-    /* Изменение размера шрифта заголовка */
-    .change_3 h2 {
-        font-size: 3vw;
-    }
-    /* Изменение размера шрифта */
-    .change_3 p {
-        font-size: 2.5vw;
-    }
-}
-/* Медиа запрос для расширения экрана равное 850 или меньше */
-@media (max-width: 850px) {
-    /* Изменение размера шрифта */
-    .change_4 p {
-        font-size: 2.7vw;
-    }
-    /* Изменение ширины блока */
-    .cb {
-        width: 30vw;
-    }
-}
-/* Медиа запрос при меньше или равно высоте экрана 550px */
-@media (max-height: 550px) {
-    /* Измененеи размера шрифта для заголовка */
-    .ds h1 {
-        font-size: 3.5vw;
-      }
 }
