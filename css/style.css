@@ -527,7 +527,7 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
         font-size: 1vw;
       }
 }
-/* Медиа запрос для расширения экрана равное 1000 или меньше */
+/* Медиа запрос для расширения экрана равное 1080 или меньше */
 @media (max-width: 1080px) {
      /* Настройка ширины контейнера и его центрирование */
      .wrapper, .rw{
@@ -547,6 +547,10 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
     .footer hr {
         width: auto;
     }
+    /* Настройка отступов для хеадера */
+    .header {
+        margin: 1.8vh 0 1.8vh 0;
+    }
     /* Скрытие всех элементов в хедоре */
     .phone, .usr, .bottom {
         display: none;
@@ -555,53 +559,18 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
     .logo img {
         width: 20vw;
     }
-    .m_top, .rw{
-        margin-bottom: 2.22vw;
+    
+    /* Скрытие логотипа десктопной версии */
+    .lg {
+    display: none;
     }
-    .m_top .chg_1 {
-        order: 1;
-        width: 40.98vw;
-        height: 29.07vh;
-    }
-    .m_top {
-        height: 29.07vh;
-    }
-    .m_top .chg_1 h1, .cb h1, .change_3 h1, .change_4 h1 {
-        font-size: 4.5vw;
-    }
-    .m_top .chg_1 h1 {
-        padding: 2vh 2vw 0 2.8vw;
-        position: static;
-        margin: 0;
-        transform: none;
-      }
-    .m_top .ds {
-        order: 2;
-    }
-    .m_top .chg {
-        width: 50.98vw;
-        height: 13.42vh;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .ds .chg .change_1 {
-        margin-top: 2.22vh;
-    }
-    .m_top .ds {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-     }
-     .lg {
-        display: none;
-     }
+     /* Отображение блока с логотипом мобильной версии с выпадающим списком */
      .dropdown {
         display: block;
         position: relative;
         display: inline-block;
     }
-    
+    /* Настройка выпадающего списка */
     .dropdown-content {
         display: none;
         position: absolute;
@@ -610,7 +579,7 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
-    
+    /* Ссылки выпадающего списка */
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -618,56 +587,109 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
         display: block;
         font-size: 2vw;
     }
-    
+    /* Эффект при наведении на ссылку списка */
     .dropdown-content a:hover {
         background-color: #ddd;
     }
-    
+    /* Отображение списка при наведении */
     .dropdown:hover .dropdown-content {
         display: block;
     }
-    
-    .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+    /* Добавление отступов для групп (строк) */
+    .m_top, .rw{
+        margin-bottom: 2.22vw;
     }
+    /* Назначение размеров и расположения 1 блока */
+    .m_top .chg_1 {
+        order: 1;
+        width: 40.98vw;
+        height: 29.07vh;
+    }
+    /* Названачение высоты первой группы */
+    .m_top {
+        height: 29.07vh;
+    }
+    /* Назначение шрифтов для заголовков элеметов */
+    .m_top .chg_1 h1, .cb h1, .change_3 h1, .change_4 h1 {
+        font-size: 4.5vw;
+    }
+    /* Изменение расположения заголовка в блоке */
+    .m_top .chg_1 h1 {
+        padding: 2vh 2vw 0 2.8vw;
+        position: static;
+        margin: 0;
+        transform: none;
+      }
+    /* Назначение расположение блока */
+    .m_top .ds {
+        order: 2;
+    }
+    /* Назначение блоку шрины, высоты и группировака элеметов */
+    .m_top .chg {
+        width: 50.98vw;
+        height: 13.42vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    /* Добавление отступа для первого элемента первой группы */
+    .ds .chg .change_1 {
+        margin-top: 2.22vh;
+    }
+    /* Расположение элементов в группе */
+    .m_top .ds {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Настройка нижней группы */
+
+    /* Настройка округления и отступа для элементов */
     .content {
         border-radius: 3.4vw;
         margin:  0 2.22vw 0 0;
     }
+    /* Настройка шрифта заголовка */
     .ds h1 {
         font-size: 3.5vw;
         margin: 0 auto;
         top: 50%;
     }
+    /* Центрирование элементов */
     .ds .chg {
         align-items: center;
         margin: 0;
     }
+    /* Отображение элементов */
     .vs, .df_txt {
         display: block;
     }
+    /* Скрытие элементов */
     .rb, .df_txt2 {
         display: none;
     }
+    /* Выравние элементов в строчку */
     .rw {
         display: flex;
     }
-    /* .rw .content, .rw {
-        height: 22.96vh;
-    } */
+    /* Настройка элементов */
     .m_bottom {
         flex-direction: column;
         align-items: center;
         margin-bottom: 1.5vh;
     }
+    /* Настройка квадратных элементов */
     .cb {
         margin: 0;
         width: 23.88vw;
     }
+    /* Назначение очередность элемента и его отступ */
     .change_5 {
         order: 1;
         margin-right: 2.22vw;
     }
+    /* Настройка заголовка */
     .cb h1 {
         transform: translate(-50%, -50%);
         left: 50%;
@@ -675,57 +697,67 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
         white-space: nowrap;
         top: 50%;
     }
+    /* Добавление отступа */
     .tp {
         margin-right: 2.9vw;
     }
+    /* Назначение элементам и группам высоты в 100% */
     .m_bottom .content {
         height: 100%;
     }
+    /* Настройка расположения элементов */
     .t_contacs {
         transform: translate(-50%, -50%);
         left: 50%;
         margin: 0;
         top: 50%;
     }
+    /* Настройка блока элемента */
     .rw .change_3, .rw .change_4 {
         width: 60.49vw;
         box-sizing: border-box;
         padding: 3.7vh 2vw;
     }
+    /* Расположение блока */
     .change_4 {
         order: 2;
         margin: 0;
     }
+    /* Настройка размера шрифта содержания */
     .change_4 p {
         font-size: 2.1vw;
     }
+    /* Сброс параметров для элементов */
     .change_4 .definition, .change_3 .t_contacs {
         margin: 0;
         padding: 0;
         position: static;
         transform: none;
     }
+    /* Выравние заголовка по центру */
     .change_3 h1 {
         text-align: center;
     }
+    /* Добавление отступа для блока */
     .definition {
         margin-left: 3vw;
     }
+    /* Настройка заголовка */
     .change_3 h2 {
         font-size: 2.7vw;
         white-space: nowrap;
     }
+    /* Настройка размера шрифта */
     .change_3 p {
         font-size: 2vw;
         white-space: nowrap;
     }
+    /* Выравние в строчку элементов */
     .text_c {
         display: flex;
     }
-    .header {
-        margin: 1.8vh 0 1.8vh 0;
-    }
 }
+/* Медиа запрос для расширения экрана равное 1000 или меньше */
 @media (max-width: 1000px) {
     .ds h1 {
         font-size: 4vw;
@@ -733,35 +765,45 @@ input::-webkit-input-placeholder { color: #FF7AAD; }
 }
 /* Медиа запрос для расширения экрана равное 900 или меньше */
 @media (max-width: 900px) {
+    /* Изменение размера шрифта */
     .cb h1, .m_top .chg_1 h1 {
         font-size: 6vw;
     }
+    /* Изменение размера шрифта заголовков */
     .change_3 h1, .change_4 h1 {
         font-size: 5vw;
     }
+    /* Добаление отступа */
     .definition {
         margin-left: 3.5vw;
     }   
+    /* Изменение размера шрифта заголовка */
     .ds h1 {
         font-size: 4.3vw;
     }
+    /* Изменение размера шрифта заголовка */
     .change_3 h2 {
         font-size: 3vw;
     }
+    /* Изменение размера шрифта */
     .change_3 p {
         font-size: 2.5vw;
     }
 }
 /* Медиа запрос для расширения экрана равное 850 или меньше */
 @media (max-width: 850px) {
+    /* Изменение размера шрифта */
     .change_4 p {
         font-size: 2.7vw;
     }
+    /* Изменение ширины блока */
     .cb {
         width: 30vw;
     }
 }
+/* Медиа запрос при меньше или равно высоте экрана 550px */
 @media (max-height: 550px) {
+    /* Измененеи размера шрифта для заголовка */
     .ds h1 {
         font-size: 3.5vw;
       }
